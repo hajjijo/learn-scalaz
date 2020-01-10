@@ -16,3 +16,4 @@ object OrderInstances {
     override def eq(left: Int, right: Int): Boolean = left == right
   }
 }
+

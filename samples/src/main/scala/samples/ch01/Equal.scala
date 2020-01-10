@@ -7,13 +7,13 @@ trait Equal[T] {
 case class Person(name: String, age: Int)
 
 object BasicEqualInstances {
-  val intEqual = new Equal[Int] {
+  implicit val intEqual = new Equal[Int] {
     def eq(left: Int, right: Int): Boolean = left == right
   }
-  val stringEqual = new Equal[String] {
+  implicit val stringEqual = new Equal[String] {
     def eq(left: String, right: String): Boolean = left == right
   }
-  val personEqual = new Equal[Person] {
+  implicit val personEqual = new Equal[Person] {
     def eq(left: Person, right: Person): Boolean = left == right
   }
 
