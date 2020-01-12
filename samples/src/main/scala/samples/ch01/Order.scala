@@ -8,7 +8,7 @@ trait Order[T] extends Equal[T] {
 }
 
 object OrderInstances {
-  val intOrder = new Order[Int] {
+  implicit val intOrder = new Order[Int] {
     override def gt(left: Int, right: Int): Boolean = left > right
     override def gte(left: Int, right: Int): Boolean = left >= right
     override def lt(left: Int, right: Int): Boolean = left < right
