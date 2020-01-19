@@ -58,7 +58,7 @@ Note that `implicit classes` are not much different from `implicit functions`, i
 ```
 Exercise 1: implement OptionHelper above using implicit functions (without using implicit classe).
 ```
-[Checkout the answer here](samples/src/test/scala/samples/ch00/Ex1.scala)
+[Checkout the answer here](samples/src/main/scala/samples/ch00/Ex1.scala)
 
 Let's do another exercise to make sure that you're convinced that Scala means `Scalable Language`! Remember Java's ternary operation ? It was `String str = 1 == 2 ? "this" : "that"` which is like the following Scala code: `val str: String = if(1 == 2) "this" else "that"`.
 How can we have this syntax in scala ?
@@ -68,6 +68,6 @@ Support also this syntax: '<t: Option[T]> | <q: T>' means t.getOrElse(q)
 So that we can have the following ternary operation :
 (1 == 2) ? "this" | "that"
 ```
-[Checkout the answer here](samples/src/test/scala/samples/ch00/Ex2.scala)
+[Checkout the answer here](samples/src/main/scala/samples/ch00/Ex2.scala)
 
 
