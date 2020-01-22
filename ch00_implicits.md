@@ -1,5 +1,5 @@
 # The implications of implicit keyword in scala !
-Scala syntax is very simple and straightforward, that is if we ignore the infamous `implicit` keyword ! This bad reputation comes from the fact that not only it's a little confusing, it is used in couple of different ways to perform different tasks. But we can summarize it in one simple concept: __Extending the language__. Let's face it step by step.
+Scala syntax is very simple and straightforward, that is if we ignore the infamous `implicit` keyword ! This bad reputation comes from the fact that not only it's a little confusing, it is used in couple of different ways to perform different tasks. But we can summarize it in one simple concept: __Extending the language__. We break implicit keyword usage into two parts: Implicit conversion and implicit parameters.
 
 ## 1.Implicit conversion
 ### 1.1 Implicit conversion with implicit functions
@@ -60,7 +60,7 @@ Exercise 1: implement OptionHelper above using implicit functions (without using
 ```
 [Checkout the answer here](samples/src/main/scala/samples/ch00/Ex1.scala)
 
-Let's do another exercise to make sure that you're convinced that Scala means `Scalable Language`! Remember Java's ternary operation ? It was `String str = 1 == 2 ? "this" : "that"` which is like the following Scala code: `val str: String = if(1 == 2) "this" else "that"`.
+Let's do another exercise to make sure that you're convinced that Scala means __Scalable Language__ ! Remember Java's ternary operation ? It was `String str = 1 == 2 ? "this" : "that"` which is like the following Scala code: `val str: String = if(1 == 2) "this" else "that"`.
 How can we have this syntax in scala ?
 ```
 Exercise 2: Using implicit classes, support the following syntax: '<A Boolean> ? <t: T>' returns Option[T], if boolean is true then Some(t) otherwise None.
@@ -70,4 +70,5 @@ So that we can have the following ternary operation :
 ```
 [Checkout the answer here](samples/src/main/scala/samples/ch00/Ex2.scala)
 
-
+## 2. Implicit parameters
+Scala defines a way to __implicitly__ pass function parameters: 
